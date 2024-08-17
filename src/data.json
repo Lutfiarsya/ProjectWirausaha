@@ -1,0 +1,66 @@
+{
+    "product":{
+        "main_food":[
+            {
+                "data":{
+                    "Image": "./Assets/SotoMie.png",
+                    "name" : "Soto Mie Bogor",
+                    "ingridients":["Bihun", "Mie", "Tomat", "Risol", "Daging", "Seledri","Daun Bawang", "Tahu", "Sayur Kol", "Kerupuk Emping", "Bawang Goreng"],
+                    "Price": "20.000"
+                }
+            },
+            {
+                "data":{
+                    "Image": "./Assets/Soto Ayam Bening.png",
+                    "name" : "Soto Ayam Bening",
+                    "ingridients":["Sohun", "Tomat", "Sayur Kol", "Ayam", "Seledri", "Daun Bawang", "Kerupuk Emping", "Bawang Goreng"],
+                    "Price": "17.000"
+                }
+            },
+            {
+                "data":{
+                    "Image": "./Assets/Soto Ayam Santan.png",
+                    "name" : "Soto Ayam Santan",
+                    "ingridients":["Kentang", "Ayam", "Tomat","Daun Bawang", "Kerupuk Emping", "Bawang Goreng"],
+                    "Price": "17.000"
+                }
+                },
+                {
+                "data":{
+                    "Image": "./Assets/Soto Daging Santan.png",
+                    "name" : "Soto Daging Santan",
+                    "ingridients":["Daging", "Kentang", "Tomat", "Daun Bawang", "Kerupuk Emping", "Bawang Goreng"],
+                    "Price": "25.000"
+                }
+            }
+            
+        ],
+        "additional_food":[
+            {
+                "data":{
+                    "name": "Risol",
+                    "Price": "2.000"
+                }
+            },
+            {
+                "data":{
+                    "name": "Telur Asin",
+                    "Price": "6.000"
+                }
+            },
+            {
+                "data":{
+                    "name": "Telur Rebus",
+                    "Price": "5.000"
+                }
+                },
+                {
+                "data":{
+                    "name": "Perkedel",
+                    "Price": "3.000"
+                }
+            }
+        ]
+
+    }
+}
