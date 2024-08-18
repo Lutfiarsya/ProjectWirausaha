@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react';
 import banner from './Assets/BannerSoto.jpg'
-import Menu from './Component/Menu';
+import Menu from './Component/Menu'
 import Contact from './Component/Contact';
 
-const Profile = () => {
-const [catchData, setCatchData] = useState('')
-const [error, setError] = useState(true)
-const [loading, setLoading] = useState(null)
+const Profile = ({Home, MenuScroll, ContactScroll}) => {
+
 
 
 
@@ -14,7 +12,7 @@ const [loading, setLoading] = useState(null)
         <div>
             <div className='flex flex-col items-center justify-center'>
             {/* Title */}
-            <div className='flex flex-col h-[450px] w-full items-center mb-56'>
+            <div className='flex flex-col h-[450px] w-full items-center mb-56' ref={Home}>
             <h1 className='text-7xl font-bold mb-6 mt-8 font-[Lexend]'>SOTO US<span className='text-[#594545]'>WATUN</span></h1>
             <img
                     src={banner}
@@ -22,14 +20,12 @@ const [loading, setLoading] = useState(null)
                     />
                     <h2 className='relative bottom-32 right-48 font-bold text-5xl font-[Fira Sans] text-[#FFF8EA]'>Rasanya yang bikin kangen<br/> Do you think i have forgotten</h2>
                     </div>
-                    <Menu />
-                    <div>
-                <div>
+                <div ref={MenuScroll}>
+                   <Menu />
                 </div>
-            </div>
             {/* Contact */}
-            <div className='mt-[370px] w-[90%]'>
-                <Contact/>
+            <div className='mt-[370px] w-[90%]' ref={ContactScroll}>
+                <Contact />
             </div>
         </div>
     </div>

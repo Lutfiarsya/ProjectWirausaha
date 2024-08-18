@@ -2,15 +2,15 @@ import data from '../data.json'
 const mapping = data.product.main_food
 
 
-const Menu = () => {
+const Menu = ({Menu}) => {
     return(
         <div className='w-full flex flex-col items-center '>
             <h1 className='text-6xl font-bold font-[Lexend]'>Our <span className='text-[#594545]'>Menu</span></h1>
             {data && (
-                <div className='grid grid-cols-4 gap-6 w-[90%] h-96 mt-6'>
+                <div className='grid grid-cols-4 gap-6 w-[90%] h-96 mt-6' ref={Menu}>
                      {mapping.map((items) => {
                     return(
-                      <div className='bg-[#FFF8EA] shadow-[3px_2px_6px_2px_#594545] rounded-2xl h-[670px] relative'>
+                      <div className='bg-[#FFF8EA] shadow-[3px_2px_6px_2px_#594545] rounded-2xl h-[670px] relative transform hover:scale-110 hover:cursor-pointer transition duration-500'>
                           <div className='bg-black w-44 h-44 m-auto my-6 rounded-full'>
                             {/* <img 
                             src={items.data.Image}
