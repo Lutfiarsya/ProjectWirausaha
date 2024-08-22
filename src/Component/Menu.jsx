@@ -54,7 +54,7 @@ const Menu = ({Menu}) => {
                                           :
                                            (view === indexUtama ||    
                                          <div className=''>
-                                           <li key={index} className={` ml-2 max-sm:text-sm text-md font-[Kufam] text-[#FFF8EA]`}>- {items}</li>
+                                           <li key={index} className={`ml-2 max-sm:text-sm text-md font-[Kufam] text-[#815B5B] max-sm:text-[#FFF8EA]`}>- {items}</li>
                                          </div>)
               
                                         }
