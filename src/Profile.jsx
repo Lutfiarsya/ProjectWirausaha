@@ -2,10 +2,13 @@ import { useEffect, useState } from 'react';
 import banner from './Assets/BannerSoto.jpg'
 import Menu from './Component/Menu'
 import Contact from './Component/Contact';
+import { motion } from 'framer-motion';
+
 
 
 const Profile = ({Home, MenuScroll, ContactScroll}) => {
 
+    
 
     return(
         <div>

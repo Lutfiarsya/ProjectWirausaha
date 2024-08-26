@@ -4,11 +4,11 @@ import { useMediaQuery } from "react-responsive";
 const Contact = ({Contact}) => {
     const[chat, setChat] = useState('')
     const[name, setName] = useState('')
-    const number = 6285774301300
+    const number = 6285694780538
     const mobile = useMediaQuery({maxWidth : 767})
     
     const handleClick = () => {
-        const url = `https://wa.me/${number}?text= Perkenalkan nama saya ${encodeURI(name)} ${encodeURI(chat)}`
+        const url = `https://wa.me/${number}?text= Name : ${encodeURI(name)} \n Massage: ${encodeURI(chat)}`
         window.location.href = url
     }
     
@@ -25,13 +25,15 @@ const Contact = ({Contact}) => {
                 placeholder="Name" 
                 className="w-96 max-sm:w-72 h-12 rounded-xl px-4 text-lg font-[Lexend]" 
                 onChange={((e) => setName(e.target.value))}
+                value={name}
                 />
                 <input 
                 placeholder="How can i help you?" 
                 className="w-96 max-sm:w-72 h-12 rounded-xl px-4 text-lg font-[Lexend]"
                 onChange={((e) => setChat(e.target.value))}
+                value={chat}
                 />
-                <button className="bg-[#594545] w-24 ml-36 max-sm:ml-0 h-8 rounded-xl font-[Lexed] text-white shadow-[2px_1px_4px_0px_#594545]" onClick={handleClick}>Send</button>
+                <button disabled={!chat.trim() && !name.trim()} className="bg-[#594545] w-24 ml-36 max-sm:ml-0 h-8 rounded-xl font-[Lexed] text-white shadow-[2px_1px_4px_0px_#594545]" onClick={handleClick}>Send</button>
             </div>
             </div>
         </div>
