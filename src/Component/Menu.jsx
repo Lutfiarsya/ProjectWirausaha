@@ -21,7 +21,7 @@ const Menu = ({Menu}) => {
   }
 
   const {ref, inView} = useInView({
-    threshold: 0.1,
+    threshold: 0.3,
   })
 
 
@@ -30,9 +30,9 @@ const Menu = ({Menu}) => {
             <h1 className='text-7xl max-sm:text-4xl font-bold font-[Lexend]'>Our <span className='text-[#594545]'>Menu</span></h1>
             {data &&(
                 <motion.div className='snap-x scroll-smooth w-[90%] grid max-sm:w-[350px] max-sm:h-[470px] z-10 max-sm:items-center max-sm:shadow-[inset_0px_2px_10px_0px_black] max-sm:rounded-xl grid-cols-4 max-sm:flex max-sm:flex-row md:gap-5 w-[90%] h-96 mt-6 max-sm:overflow-x-auto max-sm:overscroll-x-contain'
-                ref={menuRef}
+                ref={menuRef && ref}
                 initial={mobile ? {} : {opacity:0 , y:-30}}
-                animate={inView && mobile ? {opacity:1, y:0} : mobile ?  {} : {opacity:0, y:-30} }
+                animate={mobile ? null : inView ? {opacity:1, y:0} : {opacity:0, y:-30}}
                 transition={{duration: 0.8}}
                 >
                      {mapping.map((items,indexUtama) => { 
