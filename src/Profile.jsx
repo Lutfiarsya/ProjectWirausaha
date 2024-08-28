@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import banner from './Assets/BannerSoto.jpg'
 import Menu from './Component/Menu'
 import Contact from './Component/Contact';
+import AdditionalFood from './Component/AdditionalFood';
 import { motion } from 'framer-motion';
 
 
@@ -24,6 +25,7 @@ const Profile = ({Home, MenuScroll, ContactScroll}) => {
                     </div>
                 <div ref={MenuScroll} className='max-sm:mt-[-80px]'>
                    <Menu />
+                   <AdditionalFood />
                 </div>
             {/* Contact */}
             <div className='mt-[370px] max-sm:mt-24 w-[90%]' ref={ContactScroll}>

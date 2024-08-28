@@ -1,6 +1,6 @@
 import data from '../data.json'
-import { AnimatePresence, motion, usePresence, Variants } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import {  motion } from 'framer-motion';
+import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { CaretRight, CaretLeft } from 'phosphor-react';
 import { useRef } from 'react';
@@ -14,14 +14,27 @@ const Menu = ({Menu}) => {
   const[view,setView] = useState(false)
   const mobile = useMediaQuery({maxWidth : 767})
   const menuRef = useRef(null)
-
+  
   const ScrollHorizontal = (scrollOffset) => {
-    menuRef.current.scrollLeft += scrollOffset;
+    const element = document.getElementById('divContainer')
+    let scrollComplited = 0
+    let slider = setInterval(function() {
+      if(scrollOffset === 'left'){
+        element.scrollLeft -= 348
+      }else{
+        element.scrollLeft += 348
+      }
 
+      scrollComplited += 348;
+      if(scrollComplited >= 1600){
+        window.clearInterval(slider)
+      }
+    })
   }
 
   const {ref, inView} = useInView({
-    threshold: 0.3,
+    threshold: 0.2,
+    triggerOnce: true
   })
 
 
@@ -29,10 +42,10 @@ const Menu = ({Menu}) => {
         <div className='w-full flex flex-col items-center'>
             <h1 className='text-7xl max-sm:text-4xl font-bold font-[Lexend]'>Our <span className='text-[#594545]'>Menu</span></h1>
             {data &&(
-                <motion.div className='snap-x scroll-smooth w-[90%] grid max-sm:w-[350px] max-sm:h-[470px] z-10 max-sm:items-center max-sm:shadow-[inset_0px_2px_10px_0px_black] max-sm:rounded-xl grid-cols-4 max-sm:flex max-sm:flex-row md:gap-5 w-[90%] h-96 mt-6 max-sm:overflow-x-auto max-sm:overscroll-x-contain'
-                ref={menuRef && ref}
+                <motion.div id='divContainer' className='snap-x scroll-smooth w-[90%] grid max-sm:w-[350px] max-sm:h-[470px] z-10 max-sm:items-center max-sm:shadow-[inset_0px_2px_10px_0px_black] max-sm:rounded-xl grid-cols-4 max-sm:flex max-sm:flex-row md:gap-5 w-[90%] h-96 mt-6 max-sm:overflow-x-scroll max-sm:overscroll-x-contain'
+                ref={ref}
                 initial={mobile ? {} : {opacity:0 , y:-30}}
-                animate={mobile ? null : inView ? {opacity:1, y:0} : {opacity:0, y:-30}}
+                animate={mobile ? {} : inView ? {opacity:1, y:0} : {opacity:0, y:-30}}
                 transition={{duration: 0.8}}
                 >
                      {mapping.map((items,indexUtama) => { 
@@ -90,8 +103,8 @@ const Menu = ({Menu}) => {
             )}
             {mobile ? 
               <div className='mt-8 flex flex-row justify-between items-center w-[50%] h-16'>
-                <button onClick={() => ScrollHorizontal(-348)} className='bg-[#9E7676] p-4 rounded-full text-white transform transition duration-700 hover:scale-110 shadow-[2px_2px_5px_2px_#594545] hover:shadow-[4px_3px_7px_3px_#594545]'><CaretLeft size={32}  /></button>
-                <button  onClick={() => ScrollHorizontal(348)} className='bg-[#9E7676] p-4 rounded-full text-white transform transition duration-700 hover:scale-110 shadow-[2px_2px_5px_2px_#594545] hover:shadow-[4px_3px_7px_3px_#594545]'><CaretRight size={32}/></button>
+                <button onClick={() => ScrollHorizontal('left')} className='bg-[#9E7676] p-4 rounded-full text-white transform transition duration-700 hover:scale-110 shadow-[2px_2px_5px_2px_#594545] hover:shadow-[4px_3px_7px_3px_#594545]'><CaretLeft size={32}  /></button>
+                <button  onClick={() => ScrollHorizontal('right')} className='bg-[#9E7676] p-4 rounded-full text-white transform transition duration-700 hover:scale-110 shadow-[2px_2px_5px_2px_#594545] hover:shadow-[4px_3px_7px_3px_#594545]'><CaretRight size={32}/></button>
             </div> : null}
         </div>
     )
