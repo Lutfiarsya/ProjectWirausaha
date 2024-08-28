@@ -1,7 +1,9 @@
 import data from '../data.json'
-const AdditionalFood = () => {
-const dataMenu = data.product.additional_food
 
+
+
+const ToppingFood = () => {
+const dataMenu = data.product.additional_food
 return(
     <div>
         {data && (
@@ -18,7 +20,7 @@ return(
         )}
     </div>
 )
-}
+};
 
-export default AdditionalFood;
+export default ToppingFood;
 
