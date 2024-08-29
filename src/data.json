@@ -38,26 +38,34 @@
         "additional_food":[
             {
                 "data":{
+                    "id": "1",
                     "name": "Risol",
-                    "Price": "2.000"
+                    "Price": "2.000",
+                    "src_image": "./Assets/Risol-Object.png"
                 }
             },
             {
                 "data":{
+                    "id": "2",
                     "name": "Telur Asin",
-                    "Price": "6.000"
+                    "Price": "6.000",
+                    "src_image": "./Assets/telur asin rebus.png"
                 }
             },
             {
                 "data":{
+                    "id": "3",
                     "name": "Telur Rebus",
-                    "Price": "5.000"
+                    "Price": "5.000",
+                    "src_image": "./Assets/Telur rebus.png"
                 }
                 },
                 {
                 "data":{
+                    "id": "",
                     "name": "Perkedel",
-                    "Price": "3.000"
+                    "Price": "3.000",
+                    "src_image": "./Assets/Perkedel-Object.png"
                 }
             }
         ]

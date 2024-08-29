@@ -13,10 +13,10 @@ const Contact = ({Contact}) => {
     }
     
     return(
-        <div className="flex flex-col items-center mb-6 p-6 max-sm:p-0" ref={Contact}>
+        <div className="flex flex-col items-center mb-6 max-sm:mb-12 p-6 max-sm:p-0" ref={Contact}>
             <h1 className='max-sm:text-4xl text-7xl font-bold font-[Lexend] mb-6'>Contact<span className='text-[#594545]'> Us</span></h1>
             {/* Maps */}
-            <div className="flex max-sm:flex-col flex-row max-sm:h-[500px] justify-around max-sm:w-[95%] w-[80%] bg-[#FFF8EA] p-4 shadow-[3px_2px_6px_2px_#594545] rounded-xl">
+            <div className="mb-12 flex max-sm:flex-col flex-row max-sm:h-[500px] justify-around max-sm:w-[95%] w-[80%] bg-[#FFF8EA] p-4 shadow-[3px_2px_6px_2px_#594545] rounded-xl">
             <div>
             {mobile ?  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.5859601942855!2d106.81704923849318!3d-6.218307880107957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1557e660c2d%3A0xfd8f4c2647a6e9bb!2sTenda%20Biru!5e0!3m2!1sid!2sid!4v1723906015736!5m2!1sid!2sid" width="300" height="200"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className="rounded-xl border-solid border border-2 border-[#594545]"></iframe> :  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.5859601942855!2d106.81704923849318!3d-6.218307880107957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1557e660c2d%3A0xfd8f4c2647a6e9bb!2sTenda%20Biru!5e0!3m2!1sid!2sid!4v1723906015736!5m2!1sid!2sid" width="400" height="300"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className="rounded-xl border-solid border border-2 border-[#594545]"></iframe> } 
             </div>

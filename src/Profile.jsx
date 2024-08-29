@@ -24,10 +24,12 @@ const Profile = ({Home, MenuScroll, ContactScroll}) => {
                     </div>
                 <div ref={MenuScroll} className='max-sm:mt-[-80px]'>
                    <Menu />
+                </div>
+                <div className='mt-[370px] max-sm:mt-24 w-[90%]'>
                    <ToppingFood />
                 </div>
             {/* Contact */}
-            <div className='mt-[370px] max-sm:mt-24 w-[90%]' ref={ContactScroll}>
+            <div className='mt-[100px] max-sm:mt-24 w-[90%]' ref={ContactScroll}>
                 <Contact />
             </div>
         </div>
