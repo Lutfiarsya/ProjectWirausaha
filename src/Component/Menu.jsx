@@ -5,6 +5,11 @@ import { useMediaQuery } from 'react-responsive';
 import { CaretRight, CaretLeft } from 'phosphor-react';
 import { useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
+import SotoMie from '../Assets/MainFood/Soto Mie Bogor.png'
+import SotoAyamBening from '../Assets/MainFood/Soto Ayam Bening.png'
+import SotoAyamSantan from '../Assets/MainFood/Soto Ayam Santan.jpg'
+import SotoDaging from '../Assets/MainFood/Soto Daging.png'
+
 
 
 
@@ -38,6 +43,10 @@ const Menu = ({Menu}) => {
   })
 
 
+  //Image Source
+  const ImageSrc = [SotoMie, SotoAyamBening, SotoAyamSantan, SotoDaging]
+  const ImageSrcMap = ImageSrc.map(items => items)
+
     return(
         <div className='w-full flex flex-col items-center'>
             <h1 className='text-7xl max-sm:text-4xl font-bold font-[Lexend]'>Our <span className='text-[#594545]'>Menu</span></h1>
@@ -52,11 +61,12 @@ const Menu = ({Menu}) => {
                        return(  
                          <div  className='inline-block snap-center bg-[#FFF8EA] max-sm:w-[300px] max-sm:mx-6 max-sm:px-4 shadow-[3px_2px_6px_2px_#594545] rounded-2xl h-[670px] max-sm:h-[370px] transform hover:scale-110 hover:cursor-pointer transition duration-500'>
                           <div className='bg-black w-44 h-44 m-auto my-6 max-sm:mt-6 rounded-full'> 
-                            {/* <img 
-                            src={items.data.Image}
+                            <img 
+                            src={ImageSrcMap[indexUtama]}
                             width={50}
                             height={50}
-                            /> */}
+                            className='max-sm:w-36 max-sm:h-36 w-44 h-44 object-cover rounded-full'
+                            />
                           </div>
                           <div className='flex flex-col w-[90%]'>
                           <h1 className='font-bold text-[#594545] text-4xl ml-2 max-sm:text-xl font-[Lexend] h-16'>{items.data.name}</h1>
