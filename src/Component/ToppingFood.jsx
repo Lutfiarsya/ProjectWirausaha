@@ -23,7 +23,7 @@ return(
                 <div className='grid grid-cols-2 gap-24 mt-24 max-sm:mt-8 max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:grid-cols-1 max-sm:gap-8'>
                 {dataMenu.map((items, index) => {
                     return(
-                        <div className='bg-[#FFF8EA] w-[500px] max-sm:w-80 max-sm:h-32 h-40 rounded-r-full rounded-l-full flex flex-row shadow-[3px_2px_6px_2px_#594545] rounded-2xl h-[670px] max-sm:h-[370px] transform hover:scale-110 hover:cursor-pointer transition duration-500'>
+                        <div className='bg-[#FFF8EA] w-[500px] max-sm:w-80 max-sm:h-32 h-36 rounded-r-full rounded-l-full flex flex-row shadow-[3px_2px_6px_2px_#594545] rounded-2xl transform hover:scale-110 hover:cursor-pointer transition duration-500'>
                             <div key={items.data.id} className='max-sm:w-36 max-sm:h-36 bg-black w-52 h-52 flex justify-center items-center rounded-full mt-[-22px] ml-[-10px] max-sm:mt-[-10px]'>
                                 <img 
                                  src={mapArray[index]}    

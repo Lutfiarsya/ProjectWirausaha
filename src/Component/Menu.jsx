@@ -65,7 +65,7 @@ const Menu = ({Menu}) => {
                             src={ImageSrcMap[indexUtama]}
                             width={50}
                             height={50}
-                            className='max-sm:w-36 max-sm:h-36 w-44 h-44 object-cover rounded-full'
+                            className='w-44 h-44 object-cover rounded-full'
                             />
                           </div>
                           <div className='flex flex-col w-[90%]'>
