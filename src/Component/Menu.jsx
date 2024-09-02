@@ -59,7 +59,7 @@ const Menu = ({Menu}) => {
                 >
                      {mapping.map((items,indexUtama) => { 
                        return(  
-                         <div  className='inline-block snap-center bg-[#FFF8EA] max-sm:w-[300px] max-sm:mx-6 max-sm:px-4 shadow-[3px_2px_6px_2px_#594545] rounded-2xl h-[670px] max-sm:h-[370px] transform hover:scale-110 hover:cursor-pointer transition duration-500'>
+                         <div  className={`inline-block snap-center bg-[#FFF8EA] max-sm:w-[300px] max-sm:mx-6 max-sm:px-4 shadow-[3px_2px_6px_2px_#594545] rounded-2xl h-[670px] max-sm:h-[370px] transform hover:scale-110 hover:cursor-pointer transition duration-500 max-sm:hover:scale-100`}>
                           <div className='bg-black w-44 h-44 m-auto my-6 max-sm:mt-6 rounded-full'> 
                             <img 
                             src={ImageSrcMap[indexUtama]}
